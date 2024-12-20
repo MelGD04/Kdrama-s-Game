@@ -1,0 +1,100 @@
+.sidenav { 
+    height: 100%; 
+    width: 250px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    background-color: black; 
+    padding-top: 20px; 
+    border-right: 2px solid white;
+    text-align: center; 
+}
+
+img{
+  width: 240px;
+  height: 120px;
+  margin-left: 5px;    
+}
+.sidenav a {
+  padding: 10px; 
+    text-decoration: none; 
+    font-size: 1.3rem; 
+    color: white; 
+    flex-wrap: wrap; 
+    display: block;
+    margin:10px;
+} 
+.sidenav a:hover { 
+    background-color: #575757;
+    border-radius: 10px;
+}
+.main-content { 
+    margin-left: 260px; /* Margen igual al ancho del menú lateral */ 
+    padding: 20px; 
+}
+
+.home{
+  border-top: 1px solid white;
+}
+.game-section{
+  border-top: 1px solid white;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.game-section a:hover{
+    text-shadow: 1px 1px black; 
+}
+.game-section a:hover span{
+    color:rgb(172, 22, 22); 
+}
+.button {
+    height: 50px;
+    width: 200px;
+    position:relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    overflow: hidden;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-family: "Protest Revolution", serif;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+.user-avatar{
+  width:70px;
+  height: 70px;
+  border-radius: 50px;
+} 
+.user-section{
+  padding: 10px;
+} 

@@ -1,0 +1,32 @@
+<div class="sidenav">
+
+  <img src="Logo.png" alt="logo">
+
+  <nav class="navbar">
+
+    <div class="user-section">
+
+      <img class="user-avatar" src="default-avatar.png" alt="user">
+
+      <button routerLink="/login" class="button type1">
+        <span class="btn-txt">Login</span>
+      </button>
+    </div>
+    
+    <nav class="home">
+      <a routerLink="">Home</a>
+      <a>About</a>
+    </nav>
+    <div class="game-section">
+      <a routerLink="/pyramid-game"><span>Pyramid</span> Game</a>
+      <a routerLink="/night-as-come"><span>Night</span> Has <span>Come</span></a>
+    </div>
+
+  </nav>
+</div>
+
+
+<div class="main-content">    
+  <router-outlet></router-outlet>
+</div>
+  
