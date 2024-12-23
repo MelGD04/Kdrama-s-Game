@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-night-as-come',
@@ -6,6 +6,20 @@ import { Component } from '@angular/core';
   templateUrl: './night-as-come.component.html',
   styleUrl: './night-as-come.component.css'
 })
-export class NightAsComeComponent {
+export class NightAsComeComponent{
 
+    @HostListener ('windowScroll', [])
+    onWindowScroll(): void{
+      const boton = document.querySelector(".button") as HTMLElement | null;
+      if (boton) {
+        if (window.scrollY > 0) {
+          boton.classList.add("scrolled");
+        } else {
+          boton.classList.remove("scrolled");
+        }
+      }
+    }
+    
+
+  
 }

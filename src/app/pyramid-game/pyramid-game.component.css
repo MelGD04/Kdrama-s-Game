@@ -1,3 +1,7 @@
+.content{
+    position:relative;
+    overflow:0;
+}
 h2{
     text-align: center;
     margin: 0;
@@ -5,4 +9,74 @@ h2{
 }
 span{
     color:rgb(172, 22, 22); 
+}
+.button{
+  width: 140px;
+  height: 50px;
+  display: flex; 
+  align-items:center;
+  justify-content: flex-start; 
+  gap:10px;
+  padding:0px 15px;
+  background-color: rgb(172, 22, 22);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  position: fixed; 
+  cursor: pointer;
+  font-weight: 900;
+  font-family: "Protest Revolution", serif; 
+  transition-duration: .2s;
+  top:0;
+  left:0;
+}
+@media (min-width: 600px) {
+   .button { 
+      top: auto; 
+      bottom: 10px; 
+      left: 55%; 
+      transform: translateX(-50%); 
+  } 
+}
+.game path {
+  color: white;
+}
+
+.button .arrow {
+  position: absolute;
+  right: 0;
+  padding: 0px 5px;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: black;
+  transition-duration: .2s;
+}
+
+.button:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.button:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
 }

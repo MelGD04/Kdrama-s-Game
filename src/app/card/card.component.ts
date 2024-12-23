@@ -19,7 +19,7 @@ export class CardComponent {
       id: '2',
       img: 'https://upload.wikimedia.org/wikipedia/en/2/2c/Night_Has_Come_poster.png',
       title: 'Night Has Come',
-      info: 'This is some information about card 2.'
+      info: "It’s a game involving 2 different teams (the mafia and the townspeople) with 4 different characters (Mafia, Citizens, Doctor and Police) plus a Moderator/Mayor. The Citizens, Doctor and Police all belong to the team of townspeople while the Mafia forms their own team by themselves. In the beginning of the game, each player is given one of the characters without knowing any of the other players characters."
     }
   ]
 }

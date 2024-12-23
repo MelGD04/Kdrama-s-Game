@@ -18,8 +18,7 @@ body{
 
 app-side-bar { 
     width: 250px; /* Ancho fijo para el sidebar */ 
-    background-color: #000000; 
-    color: white; 
+ 
     padding: 20px; 
 }
 
