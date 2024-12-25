@@ -19,4 +19,11 @@ export class PyramidGameComponent {
         }
       }
     }
+
+    currentContent: string = 'content1'; // Inicialmente muestra el primer encabezado (índice 0)
+  
+    showContent(title: string): void { 
+      console.log('Cambiando a:', title);
+      this.currentContent = title; 
+    }
 }

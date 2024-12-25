@@ -3,10 +3,12 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PyramidGameComponent } from './pyramid-game/pyramid-game.component';
 import { NightAsComeComponent } from './night-as-come/night-as-come.component';
+import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
     {path:'login', component:LoginComponent},
     {path:'pyramid-game', component:PyramidGameComponent},
-    {path:'night-as-come', component:NightAsComeComponent}
+    {path:'night-as-come', component:NightAsComeComponent},
+    {path: 'about', component:AboutComponent}
 ];

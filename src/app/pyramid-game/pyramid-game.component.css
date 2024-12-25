@@ -1,11 +1,15 @@
-.content{
-    position:relative;
-    overflow:0;
+:host{
+  display:block;
+  min-height: 100vh;
+  background-color:black;
+}
+.content1{
+  padding-top:20px;
 }
 h2{
     text-align: center;
     margin: 0;
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 3px #222;
 }
 span{
     color:rgb(172, 22, 22); 
@@ -79,4 +83,32 @@ span{
 .button:active {
   transform: translate(1px , 1px);
   transition-duration: .2s;
+}
+
+.content2{
+  padding-top:20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  text-align: center;
+}
+.container img{
+  width:270px;
+  height: 170px;
+  margin-bottom: 15px;
+}
+
+.input-pass input{
+  background-color: transparent;
+  border: none; 
+  border-bottom: 2px solid white; 
+  outline: none; 
+  color: white;
+  margin: 10px;
+  border-bottom: 2px solid white;
+  width: 50px; 
+  text-align: center;
+  font-size: 2rem; 
 }
