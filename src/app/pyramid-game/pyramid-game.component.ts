@@ -26,4 +26,12 @@ export class PyramidGameComponent {
       console.log('Cambiando a:', title);
       this.currentContent = title; 
     }
+
+    voteNumbers = [
+      { id:'1' },
+      { id:'2' }, 
+      { id:'3' },
+      { id:'4' },
+      { id:'5' }
+    ]
 }

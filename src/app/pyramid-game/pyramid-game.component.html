@@ -16,6 +16,8 @@
         <div class="container">
             <img src="pg-header.png" alt="pg header">
 
+            <p>Please enter the password</p>
+
             <div class="input-pass">
                 <span>
                     <label for="password" class="label"></label>
@@ -36,8 +38,10 @@
             </div>
         </div>
 
-        <button (click)="showContent('content3')"> NEXT</button>
-        
+        <div class="btn-next">
+            <button (click)="showContent('content3')"> NEXT</button>
+        </div>
+    
     </div>
 }
 
@@ -45,6 +49,26 @@
     <div class="content3">
         <div class="container">
             <img src="pg-header.png" alt="pg header">
+
+            <h4>Info</h4>
+            <p>otra info</p>
+
+            <div class="center">
+                <div class="voting">
+                    @for (voteNumber of voteNumbers; track voteNumber.id) {
+                        <div class="row">
+                            <h1>{{ voteNumber.id }}</h1>
+    
+                            <input type="text" required="" autocomplete="off" placeholder="">
+                            <label for="name"></label>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="btn-next">
+                <button (click)="showContent('content3')"> Vote</button>
+            </div>
         </div>    
     </div>
 }
