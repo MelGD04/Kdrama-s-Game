@@ -1,13 +1,22 @@
-.sidenav { 
+.container {
+  height: 100vh;
+}
+
+mat-sidenav { 
   height: 100%; 
   width: 250px; 
-  position: fixed; 
   top: 0; 
   left: 0; 
+  border-radius-top-right: 15px;
+  border-radius-bottom-right: 15px;
   background-color: black; 
   padding-top: 20px; 
   border-right: 1px solid white;
   text-align: center; 
+  position:fixed;
+  font-family: "Protest Revolution", serif; 
+  font-weight: 400; 
+  font-style: normal; 
 }
 
 img{
@@ -15,7 +24,7 @@ img{
   height: 120px;
   margin-left: 5px;    
 }
-.sidenav a {
+mat-sidenav a {
   padding: 10px; 
   text-decoration: none; 
   font-size: 1.3rem; 
@@ -24,12 +33,9 @@ img{
   display: block;
   margin:10px;
 } 
-.sidenav a:hover { 
+mat-sidenav a:hover { 
   background-color: #575757;
   border-radius: 10px;
-}
-.main-content { 
-  margin-left: 250px; 
 }
 
 .home{
@@ -101,3 +107,13 @@ border-radius: 50px;
 padding: 10px;
 margin-bottom:10px;
 } 
+mat-toolbar{
+  background-color:black;
+}
+.custom-menu-button{
+  background-color: transparent;
+  border:none;
+  width: 50px;
+  height: 50px;
+  color:white;
+}

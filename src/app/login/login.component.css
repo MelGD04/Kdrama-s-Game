@@ -3,7 +3,12 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    padding-top:50px;
+    background-color:black;
+    height:100vh;
+
+    font-family: "Protest Revolution", serif; 
+    font-weight: 400; 
+    font-style: normal; 
 }
 .form-container h3{
     text-align: center; 

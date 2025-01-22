@@ -1,31 +1,46 @@
-<div class="sidenav">
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav [mode]="isScreenSmall ? 'over' : 'side'" [opened]="!isScreenSmall">
+    <img src="Logo.png" alt="logo">
 
-  <img src="Logo.png" alt="logo">
+    <nav class="navbar">
 
-  <nav class="navbar">
+      <div class="user-section">
 
-    <div class="user-section">
+        <img class="user-avatar" src="default-avatar.png" alt="user">
 
-      <img class="user-avatar" src="default-avatar.png" alt="user">
+        <button routerLink="/login" class="button type1">
+          <span class="btn-txt">Login</span>
+        </button>
+      </div>
 
-      <button routerLink="/login" class="button type1">
-        <span class="btn-txt">Login</span>
-      </button>
-    </div>
-    
-    <nav class="home">
-      <a routerLink="">Home</a>
-      <a routerLink="/about">About</a>
+      <div class="home">
+        <a routerLink="">Home</a>
+        <a routerLink="/about">About</a>
+      </div>
+      <div class="game-section">
+        <a routerLink="/pyramid-game"><span>Pyramid</span> Game</a>
+        <a routerLink="/night-as-come"><span>Night</span> Has <span>Come</span></a>
+      </div>
+
     </nav>
-    <div class="game-section">
-      <a routerLink="/pyramid-game"><span>Pyramid</span> Game</a>
-      <a routerLink="/night-as-come"><span>Night</span> Has <span>Come</span></a>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+
+    @if (isScreenSmall) {
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" class="custom-menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    }
+
+    <div class="main-content">
+      <router-outlet></router-outlet>
     </div>
 
-  </nav>
-</div>
+  </mat-sidenav-content>
 
 
-<div class="main-content">    
-  <router-outlet></router-outlet>
-</div>
+</mat-sidenav-container>

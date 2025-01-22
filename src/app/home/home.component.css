@@ -1,5 +1,11 @@
 .content{
     padding-top:30px;
+    background-color:black;
+    min-height: 100vh;
+    font-family: "Protest Revolution", serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    color:white;
 }
 #title{ 
     text-align: center; 

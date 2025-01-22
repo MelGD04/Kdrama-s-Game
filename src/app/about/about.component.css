@@ -1,5 +1,12 @@
 .content{
     padding: 30px;
+    height: 100vh;
+  background-color: black;
+
+  font-family: "Protest Revolution", serif; 
+  font-weight: 400; 
+  font-style: normal; 
+  color: white;
 }
 h2{
     text-align: center;

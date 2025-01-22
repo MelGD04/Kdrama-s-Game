@@ -1,7 +1,13 @@
 :host{
   display:block;
   min-height: 100vh;
-  background-color:black;
+  background-color: black;
+
+  font-family: "Protest Revolution", serif; 
+  font-weight: 400; 
+  font-style: normal; 
+  color: white;
+  position: relative;
 }
 .content1{
   padding-top:20px;
@@ -14,7 +20,7 @@ h2{
 span{
     color:rgb(172, 22, 22); 
 }
-.button{
+.botton{
   width: 140px;
   height: 50px;
   display: flex; 
@@ -31,22 +37,21 @@ span{
   font-weight: 900;
   font-family: "Protest Revolution", serif; 
   transition-duration: .2s;
-  top:0;
-  left:0;
+  transform: translateX(-50%);
+  bottom:20px;
+  left: calc(125px + 50%);
 }
-@media (min-width: 600px) {
-   .button { 
-      top: auto; 
-      bottom: 10px; 
-      left: 55%; 
-      transform: translateX(-50%); 
-  } 
+@media (max-width: 768px){
+  .botton{
+    left:50%;
+  }
 }
+
 .game path {
   color: white;
 }
 
-.button .arrow {
+.botton .arrow {
   position: absolute;
   right: 0;
   padding: 0px 5px;
@@ -58,13 +63,13 @@ span{
   justify-content: center;
 }
 
-.button:hover,
-.button:focus {
+.botton:hover,
+.botton:focus {
   background-color: black;
   transition-duration: .2s;
 }
 
-.button:hover .arrow {
+.botton:hover .arrow {
   animation: slide-right .6s ease-out both;
 }
 /* arrow animation */
@@ -80,7 +85,7 @@ span{
   }
 }
 
-.button:active {
+.botton:active {
   transform: translate(1px , 1px);
   transition-duration: .2s;
 }
@@ -97,33 +102,9 @@ p{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.content2 button{
-  width: 180px;
-  height: 50px;
-  border-radius: 10px;
-  cursor:pointer;
-  border:none;
-  background-color: #222;
-  color:#fff;
-  font-family:"Protest Revolution", serif; 
-  position:fixed;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-}
-.content2 button:hover{
-  background-color:#757575;
-}
-@media (min-width: 600px) {
-  .content2 button { 
-     top: auto; 
-     bottom: 70px; 
-     left: 58.4%; 
-     transform: translateX(-50%); 
- } 
-}
 .container{
   text-align: center;
+  
 }
 .container img{
   width:270px;
@@ -137,7 +118,6 @@ p{
   outline: none; 
   color: white;
   margin: 10px;
-  border-bottom: 2px solid white;
   width: 50px; 
   text-align: center;
   font-size: 2rem; 
@@ -185,7 +165,7 @@ p{
   width:150px;
   font-size:1.3rem;
 }
-.content3 button{
+.next{
   width: 270px;
   height: 50px;
   border-radius: 10px;
@@ -194,19 +174,120 @@ p{
   background-color: #222;
   color:#fff;
   font-family:"Protest Revolution", serif; 
-  position:fixed;
+  position:absolute;
   display:flex;
   justify-content: center;
   align-items:center;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 35px;
+  
 }
-.content3 button:hover{
+.next:hover{
   background-color:#757575;
 }
-@media (min-width: 600px) {
-  .content3 button { 
-     top: auto; 
-     bottom: 20px; 
-     left: 59%; 
-     transform: translateX(-50%); 
- } 
+@media(max-width:768px){
+  .next{
+    left:50%;
+  }
+}
+.content4{
+  padding-top:20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.pyramid-loader {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+
+  clip-path: polygon(0% 5%, 50% 0%, 100% 5%, 100% 100%, 0% 100%);
+  border-left: 3px solid white; /* Lado izquierdo transparente */
+  border-right: 3px solid white; /* Lado derecho transparente */
+  border-bottom: 3px solid white; /* Lado inferior blanco */
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+ 
+}
+
+.goBack {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  width: 140px;
+  height: 50px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: #222;
+  cursor: pointer;
+  border: 0;
+  border-radius:10px;
+}
+
+
+.button-box {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.button-elem {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+.goBack:hover{
+  background-color:#757575
 }

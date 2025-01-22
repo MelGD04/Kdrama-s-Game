@@ -1,6 +1,14 @@
 .content{
     position:relative;
     overflow:0;
+    height: 100vh;
+    background-color: black;
+
+    font-family: "Protest Revolution", serif; 
+    font-weight: 400; 
+    ont-style: normal; 
+    color: white;
+    padding-top:20px
 }
 
 .content h2{
@@ -33,16 +41,14 @@
     font-weight: 900;
     font-family: "Protest Revolution", serif; 
     transition-duration: .2s;
-    top:0;
-    left:0;
+    transform: translateX(-50%);
+    bottom:20px;
+    left: calc(125px + 50%);
 }
-@media (min-width: 600px) {
-     .button { 
-        top: auto; 
-        bottom: 10px; 
-        left: 55%; 
-        transform: translateX(-50%); 
-    } 
+@media (max-width: 768px){
+  .button{
+    left:50%;
+  }
 }
 .game path {
     color: white;
